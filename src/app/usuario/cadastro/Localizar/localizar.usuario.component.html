@@ -1,0 +1,20 @@
+<table class="table table-bordered mt-2">
+  <thead>
+    <tr>
+      <th class="d-none"></th>
+      <th>Nome</th>
+      <th>Função</th>
+      <th>Desconto Max.</th>
+      <th>Comissão</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of users" (click)="GetUser(item)">
+      <td class="d-none">{{ item.Codigo }}</td>
+      <td>{{ item.Nome }}</td>
+      <td>{{ item.Nome }}</td>
+      <td>{{ item.DescontoMax | number:'2.2-4' }}</td>
+      <td>{{ item.Comissao | number:'2.2-4'}}</td>
+    </tr>
+  </tbody>
+</table>

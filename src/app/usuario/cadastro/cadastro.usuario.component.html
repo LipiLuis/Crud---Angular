@@ -1,0 +1,80 @@
+<div class="form-control shadow">
+  <button
+    class="btn btn-outline-secondary m-2"
+    
+    type="button">
+    <i class="fas fa-plus"></i>
+
+    Novo
+  </button>
+  <button
+    class="btn btn-outline-secondary m-2"
+    type="button"
+    data-bs-target="#nav-localizar"
+    aria-controls="nav-localizar">
+    <i class="fas fa-search"></i>
+  
+    Localizar
+  </button>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button
+        class="nav-link active"
+        id="nav-principal-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-principal"
+        type="button"
+        role="tab"
+        aria-controls="nav-principal"
+        aria-selected="true">
+        Principal
+      </button>
+      <button
+        class="nav-link"
+        id="nav-permissoes-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-permissoes"
+        type="button"
+        role="tab"
+        aria-controls="nav-permissoes"
+        aria-selected="false">
+        Permissões
+      </button>
+      <button
+        class="nav-link"
+        id="nav-localizar-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-localizar"
+        type="button"
+        role="tab"
+        (click)="NavSearch()"
+        aria-controls="nav-localizar"
+        aria-selected="false">
+        Localizar
+      </button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active form-control my-3"
+      id="nav-principal"
+      role="tabpanel1"
+      aria-labelledby="nav-principal-tab">
+     <principal-usuario></principal-usuario>
+    </div>
+    <div
+      class="tab-pane fade form-control mt-3"
+      id="nav-permissoes"
+      role="tabpanel2"
+      aria-labelledby="nav-permissoes-tab">
+      <permissoes-usuario></permissoes-usuario>
+    </div>
+      <div
+      class="tab-pane fade"
+      id="nav-localizar"
+      role="tabpanel3"
+      aria-labelledby="nav-localizar-tab">
+      <localizar-usuario></localizar-usuario>
+    </div>
+  </div>
+</div>

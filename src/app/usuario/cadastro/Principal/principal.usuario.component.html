@@ -1,0 +1,126 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 py-4">
+      <label for="inputEmail" class="mb-2">Codigo</label>
+      <input
+        type="number"
+        id="inputCodigo"
+        name="Codigo"
+        placeholder="0"
+        disabled
+        class="form-control mb-2"
+        style="width: 150px"
+        [(ngModel)]="usuario.Codigo"
+        #Codigo="ngModel"
+      />
+
+      <div class="col-md-10">
+        <label for="inputNome" class="mb-2">Nome</label>
+        <input
+          type="text"
+          id="inputNome"
+          name="Nome"
+          placeholder="Nome"
+          class="form-control mb-2"
+          [(ngModel)]="usuario.Nome"
+          required
+          #Nome="ngModel"
+        />
+        <div class="invalid-feedback mb-2"
+          *ngIf="Nome.invalid && (Nome.dirty || Nome.touched)">
+          <div *ngIf="Nome.errors.required">
+            Nome do produto é de preenchimento obrigatorio
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <label for="inputSenha" class="mb-2">Senha</label>
+        <input
+          type="password"
+          id="inputSenha"
+          name="Senha"
+          placeholder="Senha"
+          class="form-control mb-2"
+          [(ngModel)]="usuario.Senha"
+          #Senha="ngModel"
+        />
+      </div>
+      <form class="row g-3">
+        <div class="col-md-5">
+          <label for="inputDescMax" class="mb-2">Des. máx %</label>
+          <input
+            type="text"
+            id="inputDescMax"
+            maxlength="2"
+            name="codigo"
+            placeholder="Desconto Max %"
+            class="form-control mb-2"
+            [(ngModel)]="usuario.DescontoMax"
+            value=""
+            #DescontoMax="ngModel"
+          />
+        </div>
+        <div class="col-md-5">
+          <label for="inputComissao" class="mb-2">Comissao %</label>
+          <input
+            type="text"
+            id="inputComissao"
+            maxlength="2"
+            name="comissao"
+            placeholder="comissao"
+            class="form-control mb-2"
+            [(ngModel)]="usuario.Comissao"
+            #Comissao="ngModel"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="col-md-5 py-4">
+      <div class="container">
+        <label for="inputFunc" class="form-label">Funções</label>
+        <select
+          id="inputFunc"
+          type="number"
+          [(ngModel)]="usuario.CodigoFuncao"
+          class="form-select"
+        >
+          <option *ngFor="let f of funcoes" [ngValue]="f.codigo">
+            {{ f.nome }}
+          </option>
+        </select>
+        <div class="form-check my-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="cbxOperaCaixa"
+            [(ngModel)]="usuario.OperadorCaixa"
+            #OperadorCaixa="ngModel"
+          />
+          <label class="form-check-label" for="cbxOperaCaixa">
+            Operador de caixa
+          </label>
+        </div>
+        <label for="inputCodEmpresa" class="form-label my-2">Empresa</label>
+        <select
+          id="inputCodEmpresa"
+          [(ngModel)]="usuario.CodigoEmpresa"
+          class="form-select"
+        >
+          <option *ngFor="let c of company" [ngValue]="c.codigo">
+            {{ c.nome }}
+          </option>
+        </select>
+        <label for="inputJpb" class="form-label my-2">Empregado</label>
+        <select
+          id="inputJpb"
+          [(ngModel)]="usuario.CodigoEmpregado"
+          class="form-select"
+        >
+          <option *ngFor="let j of job" [ngValue]="j.codigo" >
+            {{ j.nome }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

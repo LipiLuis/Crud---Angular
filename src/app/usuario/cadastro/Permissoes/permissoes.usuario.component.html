@@ -1,0 +1,218 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button
+        class="nav-link active"
+        id="nav-pdv-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-pdv"
+        type="button"
+        role="tab"
+        aria-controls="nav-pdv"
+        aria-selected="true" >
+        PDV
+      </button>
+      <button
+        class="nav-link"
+        id="nav-Retaguarda-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-Retaguarda"
+        type="button"
+        role="tab"
+        aria-controls="nav-Retaguarda"
+        aria-selected="false">
+        Retaguarda
+      </button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active p-2"
+      id="nav-pdv"
+      role="tabpanel"
+      aria-labelledby="nav-pdv-tab">
+      <div class="row m-1">
+        <div class="col-6">
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.devolverProduto"
+              #Comissao="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir excluir item no pedido</label>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.VerQuantiaCaixa"
+              #VerQuantiaCaixa="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir visualizar saldo do caixa</label>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.PDV_EstornarRecbto"
+              #PDV_EstornarRecbto="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir realizar nota de devolução</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.PDV_PermitirOutrasSaidas"
+              #PDV_PermitirOutrasSaidas="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir realizar outras saidas</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.PDV_CriarOrcamento"
+              #PDV_CriarOrcamento="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir realizar orçamento</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.PDV_CancelarPedido"
+              #PDV_CancelarPedido="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir o cancelamento de nota/pedido</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.PDV_ModificarDescontoSistema"
+              #PDV_ModificarDescontoSistema="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Alterar desconto dado pelo sistema</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="
+                usuario.PDV_PermitirVendaClienteComTituloAtrasado"
+              #PDV_PermitirVendaClienteComTituloAtrasado="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir vender ao cliente com titulo atrasado</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.PDV_PermitirVendaClienteSemLimiteCredito"
+              #PDV_PermitirVendaClienteSemLimiteCredito="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir vender ao cliente SEM limite de crédito</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              [(ngModel)]="usuario.AlteraProduto"
+              #AlteraProduto="ngModel"
+              class="form-check-input"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir vender produto com estoque negativo</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade p-2"
+      id="nav-Retaguarda"
+      role="tabRetaguarda"
+      aria-labelledby="nav-Retaguarda-tab">
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.CadUsuario"
+              #CadUsuario="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir cadastro/manutenção de usuários</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.MovimentaEstoqueES"
+              #MovimentaEstoqueES="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir Movimentar Estoque</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.Ret_AlteraTabPreco"
+              #Ret_AlteraTabPreco="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir Alterar tabela de preço</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.PDV_PermitirTransfProduto"
+              #PDV_PermitirTransfProduto="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir trasferencia de produtos</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.Ret_VerCusto"
+              #Ret_VerCusto="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir Visualizar custo do produto</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.AcessaFinanceiro"
+              #AcessaFinanceiro="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir Visualizar Financeiro</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.AlteraProduto"
+              #AlteraProduto="ngModel"
+              id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">Permitir Alterar Produto</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="usuario.AcessarRetaguarda"
+              #AcessarRetaguarda="ngModel"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1">Permitir Acessar o Retaguarda</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

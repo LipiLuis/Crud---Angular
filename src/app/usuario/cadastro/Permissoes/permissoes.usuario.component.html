@@ -38,8 +38,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.devolverProduto"
               #Comissao="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir excluir item no pedido</label>
+              id="PermExcluirPedido"/>
+            <label class="form-check-label" for="PermExcluirPedido">Permitir excluir item no pedido</label>
           </div>
 
           <div class="mb-3 form-check">
@@ -48,8 +48,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.VerQuantiaCaixa"
               #VerQuantiaCaixa="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir visualizar saldo do caixa</label>
+              id="PermVisuSaldoCaixa"/>
+            <label class="form-check-label" for="PermVisuSaldoCaixa">Permitir visualizar saldo do caixa</label>
           </div>
 
           <div class="mb-3 form-check">
@@ -58,8 +58,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.PDV_EstornarRecbto"
               #PDV_EstornarRecbto="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir realizar nota de devolução</label>
+              id="PermRealNotaDevo"/>
+            <label class="form-check-label" for="PermRealNotaDevo">Permitir realizar nota de devolução</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -67,8 +67,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.PDV_PermitirOutrasSaidas"
               #PDV_PermitirOutrasSaidas="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir realizar outras saidas</label>
+              id="PermRelSaida"/>
+            <label class="form-check-label" for="PermRelSaida">Permitir realizar outras saidas</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -76,8 +76,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.PDV_CriarOrcamento"
               #PDV_CriarOrcamento="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir realizar orçamento</label>
+              id="PermRealOrc"/>
+            <label class="form-check-label" for="PermRealOrc">Permitir realizar orçamento</label>
           </div>
         </div>
         <div class="col-6">
@@ -87,8 +87,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.PDV_CancelarPedido"
               #PDV_CancelarPedido="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir o cancelamento de nota/pedido</label>
+              id="PermCancNota"/>
+            <label class="form-check-label" for="PermCancNota">Permitir o cancelamento de nota/pedido</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -96,8 +96,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.PDV_ModificarDescontoSistema"
               #PDV_ModificarDescontoSistema="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Alterar desconto dado pelo sistema</label>
+              id="AltDescDadoSis"/>
+            <label class="form-check-label" for="AltDescDadoSis">Alterar desconto dado pelo sistema</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -106,8 +106,8 @@
               [(ngModel)]="
                 usuario.PDV_PermitirVendaClienteComTituloAtrasado"
               #PDV_PermitirVendaClienteComTituloAtrasado="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir vender ao cliente com titulo atrasado</label>
+              id="PermVendClientAtras"/>
+            <label class="form-check-label" for="PermVendClientAtras">Permitir vender ao cliente com titulo atrasado</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -115,8 +115,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.PDV_PermitirVendaClienteSemLimiteCredito"
               #PDV_PermitirVendaClienteSemLimiteCredito="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir vender ao cliente SEM limite de crédito</label>
+              id="PermVendClintLimitCred"/>
+            <label class="form-check-label" for="PermVendClintLimitCred">Permitir vender ao cliente SEM limite de crédito</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -124,8 +124,8 @@
               [(ngModel)]="usuario.AlteraProduto"
               #AlteraProduto="ngModel"
               class="form-check-input"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir vender produto com estoque negativo</label>
+              id="PermVendProdEstNegative"/>
+            <label class="form-check-label" for="PermVendProdEstNegative">Permitir vender produto com estoque negativo</label>
           </div>
         </div>
       </div>
@@ -143,8 +143,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.CadUsuario"
               #CadUsuario="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir cadastro/manutenção de usuários</label>
+              id="PermCadManuUser"/>
+            <label class="form-check-label" for="PermCadManuUser">Permitir cadastro/manutenção de usuários</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -152,8 +152,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.MovimentaEstoqueES"
               #MovimentaEstoqueES="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir Movimentar Estoque</label>
+              id="PermMovEsto"/>
+            <label class="form-check-label" for="PermMovEsto">Permitir Movimentar Estoque</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -161,8 +161,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.Ret_AlteraTabPreco"
               #Ret_AlteraTabPreco="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir Alterar tabela de preço</label>
+              id="PermAltTabPrec"/>
+            <label class="form-check-label" for="PermAltTabPrec">Permitir Alterar tabela de preço</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -170,8 +170,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.PDV_PermitirTransfProduto"
               #PDV_PermitirTransfProduto="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir trasferencia de produtos</label>
+              id="PermTrasfProd"/>
+            <label class="form-check-label" for="PermTrasfProd">Permitir trasferencia de produtos</label>
           </div>
         </div>
         <div class="col-6">
@@ -181,8 +181,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.Ret_VerCusto"
               #Ret_VerCusto="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir Visualizar custo do produto</label>
+              id="PermVisuCusProd"/>
+            <label class="form-check-label" for="PermVisuCusProd">Permitir Visualizar custo do produto</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -190,8 +190,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.AcessaFinanceiro"
               #AcessaFinanceiro="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir Visualizar Financeiro</label>
+              id="PermVisuFina"/>
+            <label class="form-check-label" for="PermVisuFina">Permitir Visualizar Financeiro</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -199,8 +199,8 @@
               class="form-check-input"
               [(ngModel)]="usuario.AlteraProduto"
               #AlteraProduto="ngModel"
-              id="exampleCheck1"/>
-            <label class="form-check-label" for="exampleCheck1">Permitir Alterar Produto</label>
+              id="PermAltProd"/>
+            <label class="form-check-label" for="PermAltProd">Permitir Alterar Produto</label>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -208,9 +208,9 @@
               class="form-check-input"
               [(ngModel)]="usuario.AcessarRetaguarda"
               #AcessarRetaguarda="ngModel"
-              id="exampleCheck1"
+              id="PermAcessRetag"
             />
-            <label class="form-check-label" for="exampleCheck1">Permitir Acessar o Retaguarda</label>
+            <label class="form-check-label" for="PermAcessRetag">Permitir Acessar o Retaguarda</label>
           </div>
         </div>
       </div>

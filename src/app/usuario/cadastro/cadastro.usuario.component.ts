@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
 import { business } from "src/app/model/business";
@@ -21,9 +21,12 @@ import { principalUsuarioComponent } from "./Principal/principal.usuario.compone
     templateUrl: "./cadastro.usuario.component.html"
 })
  export class CadastroUsuarioComponent {
-  
-    public usuario: Usuario;
-    ngOnInit(): void {
+    public usuario: Usuario;  
+
+    addItem(value: Usuario) {
+      this.usuario = value;
+    }
+    ngOnInit() {
       this.usuario = new Usuario();
     }
     constructor() {

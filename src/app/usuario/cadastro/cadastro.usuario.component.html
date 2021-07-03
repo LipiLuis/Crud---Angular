@@ -60,21 +60,21 @@
       id="nav-principal"
       role="tabpanel1"
       aria-labelledby="nav-principal-tab">
-     <principal-usuario></principal-usuario>
+     <principal-usuario [usuario]='usuario'></principal-usuario>
     </div>
     <div
       class="tab-pane fade form-control mt-3"
       id="nav-permissoes"
       role="tabpanel2"
       aria-labelledby="nav-permissoes-tab">
-      <permissoes-usuario></permissoes-usuario>
+      <permissoes-usuario [usuario]='usuario'></permissoes-usuario>
     </div>
       <div
       class="tab-pane fade"
       id="nav-localizar"
       role="tabpanel3"
       aria-labelledby="nav-localizar-tab">
-      <localizar-usuario></localizar-usuario>
+      <localizar-usuario [usuario]='usuario' (newItem)="addItem($event)"></localizar-usuario>
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { business } from "src/app/model/business";
 import { Employee } from "src/app/model/Employee";
 import { funcoes } from "src/app/model/funcoes";
@@ -12,13 +12,12 @@ import { Usuario } from "src/app/model/Usuario";
 })
 
 export class permissoesUsuarioComponent{
-    
-    public usuario: Usuario;
+    @Input() usuario;
+
     constructor(){
 
     }
     ngOnInit() {
-        this.usuario = new Usuario();
 
     }
 }

@@ -51,10 +51,10 @@
           <input
             type="text"
             id="inputDescMax"
-            maxlength="2"
             name="codigo"
             placeholder="Desconto Max %"
             class="form-control mb-2"
+            mask="percent" suffix="%" 
             [(ngModel)]="usuario.DescontoMax"
             value=""
             #DescontoMax="ngModel"
@@ -65,10 +65,10 @@
           <input
             type="text"
             id="inputComissao"
-            maxlength="2"
             name="comissao"
             placeholder="comissao"
             class="form-control mb-2"
+            mask="percent" suffix="%" 
             [(ngModel)]="usuario.Comissao"
             #Comissao="ngModel"
           />

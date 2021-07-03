@@ -13,10 +13,10 @@ export class funcoesServices implements OnInit{
 
     private readonly URI= "http://localhost:3004/api/Fucoes";
     
-    private functions: funcoes[];
+    private func: funcoes;
+    private funcs: funcoes[];
 
     ngOnInit(): void {
-        this.functions = [];
       }
       get headers(): HttpHeaders {
         return  new HttpHeaders().set('content-type', 'application/json',);
@@ -27,6 +27,5 @@ export class funcoesServices implements OnInit{
 
         return this.http.get<funcoes[]>(this.URI)
     }
-
-
+    
 }

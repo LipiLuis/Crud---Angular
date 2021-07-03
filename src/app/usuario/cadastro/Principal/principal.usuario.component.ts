@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { business } from "src/app/model/business";
 import { Employee } from "src/app/model/Employee";
 import { funcoes } from "src/app/model/funcoes";
@@ -15,16 +15,18 @@ import { funcoesServices } from "src/app/Service/funcoesServices";
 })
 
 export class principalUsuarioComponent{
+  @Input() usuario;
    public funcoes: funcoes[];
    public company: business[];
    public job: Employee[];
-   public usuario: Usuario;
+  //  public usuario: Usuario;
    public msgErro: string;
+   
     constructor(private funcoesServices: funcoesServices, private empresaServices: empresaService, private empregadoService: empregadoServices ){
 
     }
     ngOnInit(){
-        this.usuario = new Usuario();
+        // this.usuario = new Usuario();
         this.funcoesServices.GetAllFunctions().subscribe(
             functions => {
                 this.funcoes = functions;

@@ -18,7 +18,7 @@
   </button>
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <button
+      <!-- <button
         class="nav-link active"
         id="nav-principal-tab"
         data-bs-toggle="tab"
@@ -51,11 +51,12 @@
         aria-controls="nav-localizar"
         aria-selected="false">
         Localizar
-      </button>
+      </button> -->
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
-    <div
+    <app-Nav-Bar [usuario]='usuario'></app-Nav-Bar>
+    <!-- <div
       class="tab-pane fade show active form-control my-3"
       id="nav-principal"
       role="tabpanel1"
@@ -75,6 +76,6 @@
       role="tabpanel3"
       aria-labelledby="nav-localizar-tab">
       <localizar-usuario [usuario]='usuario' (newItem)="addItem($event)"></localizar-usuario>
-    </div>
+    </div> -->
   </div>
 </div>

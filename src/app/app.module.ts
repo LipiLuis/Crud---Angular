@@ -16,6 +16,7 @@ import { UsuarioSevico } from './Service/UsuarioService';
 import { principalUsuarioComponent } from './usuario/cadastro/Principal/principal.usuario.component';
 import { permissoesUsuarioComponent } from './usuario/cadastro/Permissoes/permissoes.usuario.component';
 import { localizarUsuarioComponent } from './usuario/cadastro/Localizar/localizar.usuario.component';
+import { NavBarComponent } from './Shared/Nav-Bar/Nav-Bar.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -28,7 +29,8 @@ const maskConfig: Partial<IConfig> = {
     principalUsuarioComponent,
     permissoesUsuarioComponent,
     localizarUsuarioComponent,
-    CadastroUsuarioComponent 
+    CadastroUsuarioComponent ,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

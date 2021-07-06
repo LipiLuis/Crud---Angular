@@ -1,0 +1,16 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation" *ngFor="let item of Tabs; let i = index;">
+    <button type="button" class="nav-link" id="btn_{{item.Id}}" data-bs-toggle="tab" [attr.data-bs-target]="'#tab-'+ i"
+      role="tab">
+      {{item.Text}}
+    </button>
+  </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <div *ngFor="let item of Tabs; let i = index;"  class="tab-pane fade" id="tab-{{i}}" role="tabpanel">
+    <principal-usuario  [usuario]="usuario" *ngIf="i == 0 " ></principal-usuario>
+    <permissoes-usuario [usuario]='usuario' *ngIf="i == 1" ></permissoes-usuario>
+    <localizar-usuario  [usuario]='usuario' (newItem)="addItem($event)" *ngIf="i == 2" ></localizar-usuario>
+  </div>
+</div>

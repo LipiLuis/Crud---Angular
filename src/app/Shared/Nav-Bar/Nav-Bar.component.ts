@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
 import { permissoesUsuarioComponent } from 'src/app/usuario/cadastro/Permissoes/permissoes.usuario.component';
 import { principalUsuarioComponent } from 'src/app/usuario/cadastro/Principal/principal.usuario.component';
@@ -13,13 +14,21 @@ export class NavBarComponent implements OnInit {
   public TabActive: NavbarModel;
 
   @Input() usuario;
-  
-  constructor() {}
+  public returnUrl: string;
+
+  constructor(private router: Router) {}
   addItem(value: Usuario) {
     this.usuario = value;
-    console.log(value)
+    // console.log(value)
   }
+
+  NavigationTab(index: number){
+    // var x = this.Tabs.filter(t => t. == true)
+console.log(index)
+  }
+
   ngOnInit() {
+    // this.returnUrl = this.activatedRouter.snapshot.queryParams['returnUrl'];
     const tab1 = new NavbarModel();
     const tab2 = new NavbarModel();
     const tab3 = new NavbarModel();

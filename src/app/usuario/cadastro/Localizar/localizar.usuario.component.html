@@ -2,19 +2,19 @@
   <thead>
     <tr>
       <th class="d-none"></th>
-      <th>Nome</th>
-      <th>Função</th>
-      <th>Desconto Max.</th>
-      <th>Comissão</th>
+      <th >Nome</th>
+      <th >Função</th>
+      <th >Desconto Max.</th>
+      <th >Comissão</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let item of users" (click)="GetUser(item)">
       <td class="d-none">{{ item.Codigo }}</td>
-      <td>{{ item.Nome }}</td>
-      <td>{{ item.Nome }}</td>
-      <td>{{ item.DescontoMax | number:'2.2-4' }}</td>
-      <td>{{ item.Comissao | number:'2.2-4'}}</td>
+      <td style="width: 30%;">{{ item.Nome }}</td>
+      <td style="width: 30%;">{{ item.Nome }}</td>
+      <td class="text-end" style="width: 20%;">{{ item.DescontoMax | number:'2.2-4' }}</td>
+      <td class="text-end" style="width: 20%;">{{ item.Comissao | number:'2.2-4'}} </td>
     </tr>
   </tbody>
 </table>

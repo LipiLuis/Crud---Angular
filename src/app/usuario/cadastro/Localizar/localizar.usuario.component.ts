@@ -45,16 +45,7 @@ export class localizarUsuarioComponent{
     GetUser(usuarioSelect: Usuario ){      
         this.newItem.emit(usuarioSelect);
         this.usuario = usuarioSelect;
-        document.getElementById("tab-0").classList.remove("active");
-        document.getElementById("btn_3").classList.remove("active");
-
-        document.getElementById("tab-0").classList.add("active");
-        document.getElementById("tab-0").classList.add("show");
-        document.getElementById("btn_1").classList.add("active");
-
-        document.getElementById("tab-2").classList.remove("active");
-        document.getElementById("tab-2").classList.remove("Show");
-
+        document.getElementById("btn_0").click();
         console.log(usuarioSelect)
       }
 

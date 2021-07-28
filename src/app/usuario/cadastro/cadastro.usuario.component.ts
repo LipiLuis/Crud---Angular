@@ -28,6 +28,9 @@ import { principalUsuarioComponent } from "./Principal/principal.usuario.compone
     }
     ngOnInit() {
       this.usuario = new Usuario();
+      setTimeout(function () {
+        document.getElementById('btn_0').click();
+      }, 10);
     }
     constructor() {
            
